@@ -31,31 +31,18 @@ ul li{
     background-color: turquoise;
     color:black;
  }
- .container{
-    position: relative;
-    top: 150px;
-    left: 400px;
+ 
+ .form{
+     width:25%;
+     position: relative;
+     left: 30%;
  }
  .form-control{
-    width:30%;
+     width:400px;
  }
  button{
-    position: relative;
-    left: 80px;
-    background-color: white;
-    outline: none;
-    border-radius: 5px;
-    border-style: none;
-    padding: 5px;
-    background-color: rgb(8, 101, 241);
-    width: 10%;
+     width: 100px;
+     position:relative;
+     left: 250px
  }
  
-.form{
-    position: relative;
-    left: 35%;
-    top:100px;
-}
-.sign{
-    width:100%;
-}
