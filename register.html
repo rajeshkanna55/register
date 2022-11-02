@@ -27,7 +27,7 @@
         </ul>
        </div>
        <div class="container mt-5">
-       <form action="#" class="form ">
+       <form action="#" class="form " onsubmit="register()">
         <h1>Sign Up</h1>
         <div class="mb-3 mt-3">
             <select name="login" id="log">
@@ -37,11 +37,11 @@
         </div>
         <div class="mb-3 mt-3">
             <lable for="email" class="form-label">username</lable>
-            <input type="text" class="form-control" id="email" placeholder="Enter the username" required>
+            <input type="text" class="form-control" id="user" placeholder="Enter the username" required>
         </div>
         <div>
-            <label for="password" class="form-label">Email</label>
-            <input type="password" class="form-control" id="pass" placeholder="Enter the Email id" required>
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter the Email id" required>
         </div>
         <div>
             <label for="password" class="form-label">password</label>
@@ -49,13 +49,13 @@
         </div>
         <div>
             <label for="password" class="form-label">Confirm password</label>
-            <input type="password" class="form-control" id="pass" placeholder="Enter the Confirm password" required>
+            <input type="password" class="form-control" id="c_pass" placeholder="Enter the Confirm password" required>
         </div>
         <div class="btn">
-            <button class="btn btn-success pr-5"onclick="">Sign Up</button>
+            <button class="btn btn-success pr-5">Sign Up</button>
         </div>
     </div>
 </form>
-    
+    <script src="register.js"></script>
 </body>
 </html>

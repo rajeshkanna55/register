@@ -20,9 +20,7 @@ ul{
      text-decoration: none;
      background-color: rgb(0, 0, 248);
      padding:8px;
-     border-radius: 5px;
-    
-    
+     border-radius: 5px;    
 }
 ul li{
     padding: 10px;
@@ -40,9 +38,50 @@ ul li{
  .form-control{
      width:400px;
  }
- button{
+ .btn-success{
      width: 100px;
      position:relative;
-     left: 250px
+     left: 200px
  }
- 
+.flex-column{
+       
+       position:relative;
+       left:10px;
+ }
+ .nav-item
+{
+    height: 20px;
+} 
+.mt-2
+{
+    width:220px;
+    position:relative;
+    right: 42%;   
+}
+img{
+    width: 80px;
+    height:80px;
+    position: relative;
+    bottom: 63px;
+}
+.bg-light
+{
+    position:relative;
+    left: 110px;
+    bottom: 45vh;
+}
+.text-end
+{
+    position:relative;
+    right: 105px;
+}
+#table{
+    position:relative;
+    left: 112px;
+    bottom: 50vh;
+}
+td{
+    text-align: center;
+    background-color: aqua;
+}
+
