@@ -8,29 +8,38 @@ const register=()=>{
     var regEx =/^[0-9A-Z]/;
     var Arr=JSON.parse(localStorage.getItem('details'));
     if(email==='' && user==='' && pass==='' && conpass===''){
-        console.log('enter det');
+        alert('enter det');
+    }
+    else if(pass!==conpass)
+    {
+        alert('not same password');
     }
     else if(!regEx.test(user))
     {
         Arr.forEach((element) => {
             if(user===element.UserName)
             {
-                alert('already exists')
+                alert('already exists');
             }
         }); 
     }
     else if(!regularExpression.test(pass))
     {
-        console.log('pass inavlid');
+        alert('pass inavlid');
     }
-    else if(pass!==conpass)
-    {
-        console.log('not same password');
-    }
+   
     else
     {
-        console.log('valid email & password');
+        if(Arr==null){
+            var id=1;
+        }else{
+            let i=1;
+            var id=Arr.length+i;
+            console.log(id);
+        }
+        alert('valid email & password');
         const obj={
+            client_id: id,
             Client: employee,
             UserName: user,
             EmailId: email, 
@@ -45,6 +54,7 @@ const register=()=>{
         {
             Arr.push(obj);
           localStorage.setItem('details',JSON.stringify(Arr));
+          window.location.reload('logon.html');
         }
          
     }

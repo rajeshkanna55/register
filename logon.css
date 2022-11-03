@@ -66,6 +66,7 @@ img{
 }
 .bg-light
 {
+    width: 50rem;
     position:relative;
     left: 110px;
     bottom: 45vh;
@@ -76,12 +77,34 @@ img{
     right: 105px;
 }
 #table{
+    width: 65rem;
     position:relative;
     left: 112px;
-    bottom: 50vh;
+    bottom:55vh;
 }
-td{
+th{
     text-align: center;
-    background-color: aqua;
 }
-
+.nav-item:hover{
+      background-color: chocolate;
+      padding: 5px;
+      transition: 0.5s;
+}
+#user_valid,#pass_valid{
+    width: 300px; 
+}
+#button{
+    position:relative;
+    left: 100vh;
+    bottom:8vh;
+    padding: 8px;
+}
+#log
+{
+    padding-right: 100px;
+    border:none;    
+    border-bottom: 2px solid black;
+    outline: none;
+    border-radius: 4px;
+    background-color: cadetblue;
+}
