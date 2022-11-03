@@ -1,3 +1,6 @@
+
+var p_name=sessionStorage.getItem("uname");
+document.getElementById("username").innerHTML=p_name;
 var Arr=JSON.parse(localStorage.getItem('details'));
 for(let i=0;i<Arr.length;i++) 
 {   
@@ -12,11 +15,10 @@ for(let i=0;i<Arr.length;i++)
     cell2.innerHTML=Arr[i].Client;
     cell3.innerHTML=Arr[i].UserName;
     cell4.innerHTML=Arr[i].EmailId;
-    cell5.innerHTML='<button class="btn btn-info p-1" onclick="upd()">Update</button>&nbsp&nbsp<button class="btn btn-danger p-1" onclick="del(this)">Delete</button>';
+    cell5.innerHTML='<button class="btn btn-info p-1" onclick="upd(this)">Update</button>&nbsp&nbsp<button class="btn btn-danger p-1" onclick="del(this)">Delete</button>';
 }
-
 const del=(r)=>{
-    let index=r.parentNode.parentNode.rowIndex;
+    var index=r.parentNode.parentNode.rowIndex;
     document.getElementById("data_table").deleteRow(index);
     let c_id=document.getElementById("data_table").rows[index].cells[0].innerHTML;
     let D=c_id-1;
@@ -25,7 +27,11 @@ const del=(r)=>{
 
 }
 
-const upd=() =>{
-    window.location.href="edit.html";
+const upd=(k) =>{
+       var val=k.parentNode.parentNode.rowIndex;
+       let u_name=document.getElementById('data_table').rows[val].cells[2].value;
+       let e_name=document.getElementById('data_table').rows[val].cells[3].value;
+       document.getElementById('user').innerHTML=u_name;
+       document.getElementById('emailid').innerHTML=e_name;
 }
  

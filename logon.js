@@ -19,7 +19,8 @@ const validate=()=>{
         }
           if(user===Arr[i].UserName && pass===Arr[i].Password)
           {
-             window.location.href="dashboard.html"; 
+             window.location.href="dashboard.html";
+             sessionStorage.setItem("uname",user); 
           }
          
       }

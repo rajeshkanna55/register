@@ -108,3 +108,19 @@ th{
     border-radius: 4px;
     background-color: cadetblue;
 }
+#pswd,#mobileno
+{
+    position:relative;
+    left:70vh;
+    bottom: 15vh;
+}
+#save{
+    position: relative;
+    left: 61vh;
+    bottom: 15vh;
+}
+#move{
+    position:relative;
+    left:20vh;
+    bottom: 40vh;
+}
