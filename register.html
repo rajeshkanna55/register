@@ -26,12 +26,17 @@
             </li>
         </ul>
        </div>
+       <div>
+        <h2 id="scs" class="text-success text-center">
+        </h2>
+       </div>
        <div class="container mt-5">
-       <form action="#" class="form " onsubmit="register()">
+       <form action="#" class="form " >
         <h1>Sign Up</h1>
+        <h3 id="deta" class="text-danger" style="width:400px"></h3>
         <div class="mb-3 mt-3">
             <select name="login" id="log">
-                <option vlue="select">---select</option>
+                <option value="select">---select</option>
                 <option value="User">User</option>
                 <option value="Admin">Admin</option>
             </select>
@@ -39,6 +44,7 @@
         <div class="mb-3 mt-3">
             <lable for="email" class="form-label">username</lable>
             <input type="text" class="form-control" id="user" placeholder="Enter the username" required>
+            <p id="usn" class="text-danger text-sm text-end" style="width:300px;"></p>
         </div>
         <div>
             <label for="email" class="form-label">Email</label>
@@ -47,16 +53,18 @@
         <div>
             <label for="password" class="form-label">password</label>
             <input type="password" class="form-control" id="pass" placeholder="Enter the password" required>
+            <p id="pa_v" class="text-danger text-end text-sm"></p>
         </div>
         <div>
             <label for="c_password" class="form-label">Confirm password</label>
             <input type="password" class="form-control" id="c_pass" placeholder="Enter the Confirm password" required>
-        </div>
-        <div class="btn">
-            <button class="btn btn-success">Sign Up</button>
+            <p id="conpa" class="text-danger text-end text-sm" style="width:300px"></p>
         </div>
     </div>
 </form>
+<div class="btn">
+    <button class="btn btn-success" id="bttn" onclick="register()">Sign Up</button>
+</div>
     <script src="register.js"></script>
 </body>
 </html>

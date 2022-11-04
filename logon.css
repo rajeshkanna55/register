@@ -93,6 +93,10 @@ th{
 #user_valid,#pass_valid{
     width: 300px; 
 }
+#conpa,#pa_v
+{
+    width:520px;
+}
 #button{
     position:relative;
     left: 100vh;
@@ -112,7 +116,7 @@ th{
 {
     position:relative;
     left:70vh;
-    bottom: 15vh;
+    bottom: 16vh;
 }
 #save{
     position: relative;
@@ -121,6 +125,17 @@ th{
 }
 #move{
     position:relative;
-    left:20vh;
+    left:23vh;
     bottom: 40vh;
+}
+#bttn
+{
+    position:relative;
+    left: 650px;
+}
+td{
+    text-align: center;
+}
+#serach_box{
+    
 }

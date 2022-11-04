@@ -1,62 +1,60 @@
-const register=()=>{
-    var employee=document.getElementById('log').value;
-    var email=document.getElementById('email').value.trim();
-    var user=document.getElementById('user').value.trim();
-    var pass=document.getElementById('pass').value.trim();
-    var conpass=document.getElementById('c_pass').value.trim();
-    var regularExpression  = /^[a-zA-Z0-9!@#$%^&*]{8,16}$/;
-    var regEx =/^[0-9A-Z]/;
-    var Arr=JSON.parse(localStorage.getItem('details'));
-    if(email==='' && user==='' && pass==='' && conpass===''){
-        alert('enter det');
+const register = () => {
+    var employee = document.getElementById('log').value;
+    var email = document.getElementById('email').value.trim();
+    var user = document.getElementById('user').value.trim();
+    var pass = document.getElementById('pass').value.trim();
+    var conpass = document.getElementById('c_pass').value.trim();
+    var regularExpression = /^[a-zA-Z0-9!@#$%^&*]{8,16}$/;
+    var regEx = /^[0-9A-Z]/;
+    var msg1 = 'Created Successfully';
+    var msg2 = 'Enter The Same Password'
+    var msg3 = 'Username exist';
+    var msg4 = 'Password must [a-zA-Z0-9!@#$%^&*] following characters';
+    var msg5 = 'Please Fill The Details' 
+    var Arr = JSON.parse(localStorage.getItem('details'));
+    if (email === '' && user === '' && pass === '' && conpass === '') {
+        document.getElementById('deta').innerHTML = msg5;
     }
-    else if(pass!==conpass)
-    {
-        alert('not same password');
+    else if (pass !== conpass) {
+
+        document.getElementById('conpa').innerHTML = msg2;
     }
-    else if(!regEx.test(user))
-    {
+    else if (!regEx.test(user)) {
         Arr.forEach((element) => {
-            if(user===element.UserName)
-            {
-                alert('already exists');
+            if (user === element.UserName) {
+                document.getElementById('usn').innerHTML = msg3;
             }
-        }); 
+        });
     }
-    else if(!regularExpression.test(pass))
-    {
-        alert('pass inavlid');
+    else if (!regularExpression.test(pass)) {
+        document.getElementById('pa_v').innerHTML = msg4;
     }
-   
-    else
-    {
-        if(Arr==null){
-            var id=1;
-        }else{
-            let i=1;
-            var id=Arr.length+i;
-            console.log(id);
+
+    else {
+        if (Arr == null) {
+            var id = 1;
+        } else {
+            let i = 1;
+            var id = Arr.length + i;
         }
-        alert('valid email & password');
-        const obj={
+        document.getElementById('pa_v').innerHTML = msg1;
+        const obj = {
             client_id: id,
             Client: employee,
             UserName: user,
-            EmailId: email, 
+            EmailId: email,
             Password: pass
         };
-        
-        if(Arr==null)
-        {
-            localStorage.setItem('details',JSON.stringify([obj]));
+
+        if (Arr == null) {
+            localStorage.setItem('details', JSON.stringify([obj]));
         }
-        else
-        {
+        else {
             Arr.push(obj);
-          localStorage.setItem('details',JSON.stringify(Arr));
-          window.location.reload('logon.html');
+            localStorage.setItem('details', JSON.stringify(Arr));
+            window.location.href='logon.html';
         }
-         
+
     }
-    
+
 }

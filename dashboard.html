@@ -29,6 +29,9 @@
             </li>
         </ul>
        </div>
+       <div class="container">
+          <input type="text" onkeyup="search_detail()" id="search_box" class="form-control" placeholder="Search Username">
+       </div>
        <div class="container-fluid bg-warning mt-2">
            <nav class="navbar">
                <ul class="nav flex-column mt-1">
@@ -68,7 +71,9 @@
          <input type="password" id="pswd" class="form-control" placeholder="Password">
          <br>
          <input type="text" id="mobileno" class="form-control" placeholder="MobileNo">
-         <button id="save" class="btn btn-light p-2" style="background-color: lightgreen; border-radius:5px;width:60px;">save</button>
+         <button id="save" class="btn btn-light p-2" onclick="search()" style="background-color: lightgreen; border-radius:5px;width:60px;">Search</button>
+         <button id="save" class="btn btn-light p-2" onclick="save()" style="background-color: lightgreen; border-radius:5px;width:60px;">save</button>
+         
      </div>
  </div>
  </div>

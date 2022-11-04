@@ -28,10 +28,21 @@ const del=(r)=>{
 }
 
 const upd=(k) =>{
-       var val=k.parentNode.parentNode.rowIndex;
-       let u_name=document.getElementById('data_table').rows[val].cells[2].value;
-       let e_name=document.getElementById('data_table').rows[val].cells[3].value;
-       document.getElementById('user').innerHTML=u_name;
-       document.getElementById('emailid').innerHTML=e_name;
+       D=k.parentNode.parentNode.rowIndex;
+      var u_name=document.getElementById('data_table').rows[D].cells[2].innerHTML;
+      var e_name=document.getElementById('data_table').rows[D].cells[3].innerHTML;
+       id=document.getElementById('data_table').rows[D].cells[0].innerHTML;
+       document.getElementById('user').value=u_name;
+       document.getElementById('emailid').value=e_name;
 }
- 
+
+ const save=()=>{
+    let unam=document.getElementById('user').value;
+    let pswad=document.getElementById('emailid').value;
+    let s=id-1;
+    Arr[s].UserName=unam;
+    Arr[s].EmailId=pswad;
+    localStorage.setItem('details',JSON.stringify(Arr));
+    document.getElementById('data_table').rows[D].cells[2].innerHTML=unam;
+    document.getElementById('data_table').rows[D].cells[3].innerHTML=pswad;
+ }
