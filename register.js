@@ -12,6 +12,7 @@ const register = () => {
     var msg4 = 'Password must [a-zA-Z0-9!@#$%^&*] following characters';
     var msg5 = 'Please Fill The Details' 
     var Arr = JSON.parse(localStorage.getItem('details'));
+    const date=new Date();
     if (email === '' && user === '' && pass === '' && conpass === '') {
         document.getElementById('deta').innerHTML = msg5;
     }
@@ -23,6 +24,7 @@ const register = () => {
         Arr.forEach((element) => {
             if (user === element.UserName) {
                 document.getElementById('usn').innerHTML = msg3;
+                const date=new Date();
             }
         });
     }
@@ -43,14 +45,17 @@ const register = () => {
             Client: employee,
             UserName: user,
             EmailId: email,
-            Password: pass
+            Password: pass,
+            register: date
         };
 
         if (Arr == null) {
             localStorage.setItem('details', JSON.stringify([obj]));
+            window.location.href='logon.html';  
         }
         else {
-            Arr.push(obj);
+            
+            Arr.unshift(obj);
             localStorage.setItem('details', JSON.stringify(Arr));
             window.location.href='logon.html';
         }

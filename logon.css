@@ -136,6 +136,8 @@ th{
 td{
     text-align: center;
 }
-#serach_box{
-    
+#search_box{
+    position:relative;
+    left:230px;
+    bottom:95px;
 }
